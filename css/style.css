@@ -114,3 +114,43 @@ main {
     color: #6c6c6c;
     line-height: 24px;
 }
+
+/* ==========================
+    End Main Style
+========================= */
+
+/* ==========================
+    Start Footer Style
+========================= */
+footer {
+    text-align: center;
+    padding: 100px;
+}
+/* Footer logo */
+footer .footer-logo {
+    width: 484px;
+    height: 110px;
+}
+
+/* Footer Social Media Icon */
+.social-media-icon {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+footer .social-media-icon .social-media-link {
+    margin: 0 7px;
+    background: #e7e7e8;
+    padding: 10px 14px;
+    border-radius: 50%;
+    font-size: 16px;
+}
+footer .social-media-icon .social-media-link i {
+    color: #969bab;
+}
+
+/* Copyright */
+footer .footer-copyright {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+}
