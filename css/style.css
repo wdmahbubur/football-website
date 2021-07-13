@@ -1,0 +1,73 @@
+/* ==========================
+    Roboto Google Font Link
+========================= */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/* ==========================
+    Common CSS Styles 
+========================= */
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+.container {
+    width: 1050px;
+}
+/* ==========================
+    Header Style
+========================= */
+
+header {
+    background-color: #2d25a0;
+    display: flex;
+    justify-content: center;
+    padding: 42px 0 86px 0;
+    position: relative;
+}
+/* Football rotate 360deg and left to right */
+.football-img {
+    position: absolute;
+    left: -100px;
+    bottom: 0;
+    height: 60px;
+    width: 60px;
+    transition: transform 5s linear, left 5s linear;
+}
+header:hover .football-img {
+    transform: rotate(360deg);
+    left: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero-section-title h1 {
+    font-size: 64px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 27px 0;
+}
+.hero-section-title .btn {
+    text-decoration: none;
+    padding: 10px 24px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #e02c6d;
+}
+.hero-section-title .btn .fa-arrow-right {
+    margin-left: 8px;
+}
+.hero-section-img img {
+    width: 556px;
+    height: 438px;
+    transition: transform 0.9s linear;
+}
+.hero-section:hover .hero-section-img img {
+    transform: translateX(60px);
+}
+.hero-section:hover header .football-img {
+    transform: scale(1);
+}
