@@ -169,6 +169,7 @@ main {
     background-color: rgba(117, 117, 117, 0.041);
     box-shadow: 0 10px 20px 15px #0505051a;
     padding: 20px 40px;
+    border-bottom: 2px solid #7c7c7c;
 }
 .match .team .team-logo {
     height: 120px;
@@ -242,6 +243,67 @@ footer .footer-copyright {
 }
 
 /* ==========================
+    Tablet Device style
+========================= */
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+    .container {
+        width: 100%;
+    }
+
+    /* -------- Header --------*/
+    header {
+        padding: 60px 15px;
+    }
+    /* Hero section */
+    .hero-section-title h1 {
+        font-size: 44px;
+    }
+    .hero-section-img img {
+        width: 420px;
+        height: 428px;
+    }
+
+    /* -------- Main --------*/
+
+    /* Common Card Group */
+    .card-group {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 30px;
+    }
+    .card .card-photo {
+        width: 100%;
+    }
+
+    /* Match Schedule */
+    .schedule .match {
+        justify-content: space-between;
+        padding: 20px;
+    }
+    .match .match-info p {
+        font-size: 14px;
+    }
+
+    /* Latest News */
+    .latest-news .card-group {
+        grid-template-columns: 1fr;
+    }
+    .latest-news .card {
+        display: flex;
+        align-items: center;
+    }
+    .latest-news .card .card-photo {
+        width: 300px;
+        height: 200px;
+    }
+    .latest-news .card .card-body {
+        margin-left: 20px;
+    }
+    /* -------- Footer --------*/
+    footer {
+        padding: 50px;
+    }
+}
+/* ==========================
     Mobile Device style
 ========================= */
 @media only screen and (max-width: 688px) {
@@ -283,7 +345,6 @@ footer .footer-copyright {
     .schedule .match {
         justify-content: space-between;
         padding: 20px;
-        border-bottom: 1px solid #7c7c7c;
     }
 
     /* -------- Footer --------*/
