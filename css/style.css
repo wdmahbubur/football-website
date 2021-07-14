@@ -25,7 +25,13 @@ body {
     margin-top: 0;
     margin-bottom: 40px;
 }
-
+.btn {
+    text-decoration: none;
+    padding: 10px 24px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #e02c6d;
+}
 /* ==========================
     Header Style
 ========================= */
@@ -62,13 +68,6 @@ header:hover .football-img {
     font-weight: 700;
     color: #fff;
     margin: 0 0 27px 0;
-}
-.hero-section-title .btn {
-    text-decoration: none;
-    padding: 10px 24px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #e02c6d;
 }
 .hero-section-title .btn .fa-arrow-right {
     margin-left: 8px;
@@ -199,8 +198,33 @@ main {
 .latest-news .section-title-divider {
     border: 1px solid #2d25a0;
 }
+/* Latest News section style End */
 
-/* Latest News section style End*/
+/* Highlight Section style */
+.highlight-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 66px;
+    padding: 100px 0;
+}
+.highlight-title h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.highlight-title p {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+}
+.highlight-match-img img {
+    width: 567px;
+    height: 427px;
+}
+
+/* Highlight Section style End */
 
 /* ==========================
     End Main Style
@@ -211,7 +235,7 @@ main {
 ========================= */
 footer {
     text-align: center;
-    padding: 100px;
+    padding: 65px;
 }
 /* Footer logo */
 footer .footer-logo {
@@ -284,7 +308,8 @@ footer .footer-copyright {
     }
 
     /* Latest News */
-    .latest-news .card-group {
+    .latest-news .card-group,
+    .highlight-section {
         grid-template-columns: 1fr;
     }
     .latest-news .card {
@@ -297,6 +322,15 @@ footer .footer-copyright {
     }
     .latest-news .card .card-body {
         margin-left: 20px;
+    }
+
+    /* Highlight Section style */
+    .highlight-title,
+    .highlight-match-img {
+        padding: 30px;
+    }
+    .highlight-match-img img {
+        width: 100%;
     }
     /* -------- Footer --------*/
     footer {
@@ -346,7 +380,19 @@ footer .footer-copyright {
         justify-content: space-between;
         padding: 20px;
     }
-
+    /* Highligh Section */
+    .highlight-section {
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+    }
+    .highlight-title,
+    .highlight-match-img {
+        padding: 15px;
+    }
+    .highlight-match-img img {
+        width: 100%;
+        height: 248px;
+    }
     /* -------- Footer --------*/
     footer {
         padding: 0;
