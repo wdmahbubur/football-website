@@ -13,6 +13,19 @@ body {
 .container {
     width: 1050px;
 }
+/* Default section style */
+.section-title {
+    font-size: 30px;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+.section-title-divider {
+    width: 80px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
 /* ==========================
     Header Style
 ========================= */
@@ -81,39 +94,115 @@ header:hover .football-img {
 ========================= */
 main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-/* Players section style */
-.players-group {
+
+.player-details,
+.latest-news {
     margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+/* Common card style */
+.card-group {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 27px;
     grid-column-gap: 30px;
 }
-.player-card {
+.card {
     padding: 15px;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }
-.player-card .player-photo {
+.card .card-photo {
     width: 300px;
     height: 256px;
 }
-.player-card .player-info {
+.card .card-body {
     margin-top: 16px;
 }
-.player-card .player-info h3 {
+.card .card-body h3 {
     margin: 0;
     font-size: 28px;
     font-weight: 700;
     color: #18191f;
 }
-.player-card .player-info p {
+.card .card-body h3 .card-title-link {
+    color: #000;
+    text-decoration: none;
+    font-size: 24px;
+}
+.card .card-body p {
     font-size: 16px;
     font-weight: 400;
     color: #6c6c6c;
     line-height: 24px;
 }
+
+/* End Common card style */
+
+/* Match Schedule section style */
+
+.match-schedule {
+    background-color: #2d25a0;
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+    color: #fff;
+}
+.match-schedule .container {
+    margin: 0 auto;
+}
+.match-schedule .section-title-divider {
+    border: 1px solid #fff;
+}
+.match-schedule .schedule {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+}
+.schedule .match {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-color: rgba(117, 117, 117, 0.041);
+    box-shadow: 0 10px 20px 15px #0505051a;
+    padding: 20px 40px;
+}
+.match .team .team-logo {
+    height: 120px;
+    width: 100px;
+}
+.match .team-1 .team-logo {
+    transform: perspective(400px) rotateY(35deg);
+}
+.match .team-2 .team-logo {
+    transform: perspective(400px) rotateY(-35deg);
+}
+.match .team .team-name {
+    margin: 8px;
+}
+.match .match-info h2 {
+    font-size: 40px;
+    margin: 10px;
+}
+.match .match-info p {
+    margin: 0;
+    line-height: 24px;
+}
+
+/* End Match Schedule style */
+
+/* Latest News section style */
+.latest-news {
+}
+
+.latest-news .section-title-divider {
+    border: 1px solid #2d25a0;
+}
+
+/* Latest News section  style */
 
 /* ==========================
     End Main Style
