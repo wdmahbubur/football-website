@@ -31,6 +31,10 @@ body {
     font-size: 16px;
     color: #fff;
     background-color: #e02c6d;
+    transition: all 0.2s ease-in;
+}
+.btn:hover {
+    background-color: #c01855;
 }
 /* ==========================
     Header Style
@@ -39,29 +43,60 @@ body {
 header {
     background-color: #2d25a0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding: 42px 0 86px 0;
     position: relative;
 }
-/* Football rotate 360deg and left to right */
-.football-img {
-    position: absolute;
-    left: -100px;
-    bottom: 0;
-    height: 60px;
-    width: 60px;
-    transition: transform 5s linear, left 5s linear;
-}
-header:hover .football-img {
-    transform: rotate(360deg);
-    left: 100%;
+/* Responsive Navbar */
+.responsive-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
+#check {
+    display: none;
+}
+.checkbtn {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.responsive-nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+.responsive-nav ul li {
+    display: inline;
+}
+.responsive-nav ul li a {
+    padding: 10px 18px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.2s linear;
+}
+.responsive-nav ul li:hover a {
+    background-color: #fff;
+    color: #2d25a0;
+}
+.responsive-nav .btn .fa-sign-in {
+    margin-right: 8px;
+}
+.closemenu {
+    display: none;
+}
 /* Hero Section */
 .hero-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 70px;
 }
 .hero-section-title h1 {
     font-size: 64px;
@@ -82,6 +117,20 @@ header:hover .football-img {
 }
 .hero-section:hover header .football-img {
     transform: scale(1);
+}
+
+/* Football rotate 360deg and left to right */
+.football-img {
+    position: absolute;
+    left: -100px;
+    bottom: 0;
+    height: 60px;
+    width: 60px;
+    transition: transform 5s linear, left 5s linear;
+}
+header:hover .football-img {
+    transform: rotate(360deg);
+    left: 100%;
 }
 
 /* ==========================
@@ -278,6 +327,12 @@ footer .footer-copyright {
     header {
         padding: 60px 15px;
     }
+
+    /* Responsive navbar */
+    .responsive-nav ul li a {
+        padding: 8px 12px;
+    }
+
     /* Hero section */
     .hero-section-title h1 {
         font-size: 44px;
@@ -346,8 +401,41 @@ footer .footer-copyright {
     }
     /* -------- Header --------*/
     header {
-        padding: 60px 15px;
+        padding: 36px 15px;
     }
+
+    /* Responsive Navbar */
+    .checkbtn {
+        display: block;
+    }
+    .responsive-nav ul {
+        position: fixed;
+        top: -15px;
+        left: -100%;
+        background-color: #fff;
+        width: 60%;
+        height: 100vh;
+        transition: left 0.4s linear;
+    }
+    .closemenu {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        display: block;
+    }
+    .responsive-nav ul li {
+        display: block;
+        padding: 20px 10px;
+        border-bottom: 1px solid #ececec;
+    }
+    .responsive-nav ul li a {
+        color: #000;
+    }
+    /* If click icon then show the menu from left side */
+    #check:checked ~ ul {
+        left: 0;
+    }
+
     /* Hero section */
     .hero-section {
         flex-wrap: wrap;
