@@ -130,7 +130,7 @@ header {
 }
 header:hover .football-img {
     transform: rotate(360deg);
-    left: 100%;
+    left: 97%;
 }
 
 /* ==========================
@@ -447,6 +447,10 @@ footer .footer-copyright {
         width: 100%;
         height: 259px;
         margin-top: 50px;
+    }
+
+    .football-img {
+        display: none;
     }
     /* -------- Main --------*/
 
